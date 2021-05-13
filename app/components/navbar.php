@@ -36,7 +36,11 @@
         Contact
       </a>
 
-      <a href="/contact" class="navbar-item">
+      <a href="/profile/Trintus" class="navbar-item">
+        Profile
+      </a>
+
+      <a target="_blank" href="https://github.com/Trintusly/Falsa" class="navbar-item">
         GitHub
       </a>
 

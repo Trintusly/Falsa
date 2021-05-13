@@ -1,10 +1,10 @@
 <?php
 
-Component::load('page', [ 
+	Component::load('page', [ 
 
-	'title'    => 'About', 
-	'subtitle' => 'Falsa is just a highschool project. Do not expect much from it.' 
+		'title'    => 'About', 
+		'subtitle' => 'Falsa is just a highschool project. Do not expect much from it.' 
 
-]);
+	]);
 
 ?>

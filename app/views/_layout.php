@@ -16,9 +16,9 @@
 
 	<?php
 
-		// Load in our navbar for app/components/nav.php
+		// Load in our navbar for app/components/navbar.php
 
-		Component::load('nav', [
+		Component::load('navbar', [
 			
 			// You can alter the navbar title from here, give it a try!
 
@@ -28,7 +28,7 @@
 
 		// Inject our declared views into _layout
 
-		View::inject($_router->view);
+		require_once $_router->view;
 
 		// Load in our footer
 

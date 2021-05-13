@@ -2,17 +2,9 @@
 
 class View {
 
-	private $view;
+	public static function dispatch( $path, $params = [] ) {
 
-	public function __construct( $view ) {
-
-		$this->view = $view;
-
-	}
-
-	public function dispatch( $params = [] ) {
-
-		$route = $_SERVER['DOCUMENT_ROOT'] . "/app/views/" .$this->view. ".php";
+		$route = $_SERVER['DOCUMENT_ROOT'] . "/app/views/" .$path. ".php";
 
 		if (!file_exists($route)) {
 
@@ -30,13 +22,7 @@ class View {
 
 		require_once $_SERVER['DOCUMENT_ROOT'] . "/app/views/_layout.php";
 		
-		return 0;
-
-	}
-
-	public static function inject( $path ) {
-
-		require_once $path;
+		return;
 
 	}
 

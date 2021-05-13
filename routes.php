@@ -2,36 +2,31 @@
 
 $r = new Router;
 
-// Lets declare our routes in an array
+$r->route('/', function () {
 
-$routes = [
+	View::dispatch('index');
 
-	/* route => view */
-	
-	'/'  	 => 'index',
-	'/about' => 'about'
+});
 
-];
+$r->route('/about', function () {
 
-// Loop through the array
+    View::dispatch('about');
 
-foreach ($routes as $route => $view) {
+});
 
-	// Register our routes
+$r->route('/contact', function () {
 
-	$r->handle($route, function () {
+	View::dispatch('contact');
 
-		$v = new View($view);
-		$v->dispatch();
+});
 
-	});
+$r->route('/profile/{username}', function ($username) {
 
-}
+	View::dispatch('profile', [ 'username' => $username ]);
 
-// Dispatch our routes
+});
+
 
 $r->dispatch($_SERVER['REQUEST_URI']);
-
-// We are live, it's just that simple!
 
 ?>
